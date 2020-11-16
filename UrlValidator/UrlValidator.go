@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	url := "^(https?|ftp|mailto)://(www.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\/[^\\s]*$"
+	url := "^(https?|ftp|mailto)://(www.)?[a-zA-Z0-9-._]{2,256}\\.[a-z]{2,4}\\/?[^\\s]*$"
 	r, _ := regexp.Compile(url)
 
 	scanner := bufio.NewScanner(os.Stdin)
